@@ -15,10 +15,14 @@ use App\Http\Controllers\SearchController;
 */
 
 Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/startSearch', function () {
     return view('search');
 });
 
 
-Route::get('/search', [SearchController::class,'index'])->name('search');
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 

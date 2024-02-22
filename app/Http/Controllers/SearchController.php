@@ -7,7 +7,7 @@ use App\Models\Angolano;
 
 class SearchController extends Controller
 {
-    public function index(Request $request)
+    public function search(Request $request)
     {
         $query = Angolano::query();
 
@@ -23,6 +23,10 @@ class SearchController extends Controller
             $query->where('data_nascimento', $request->input('data_nascimento'));
         }
 
+        if ($request->filled('naturalidade')) {
+            $query->where('naturalidade', $request->input('naturalidade'));
+        }
+
         // Lógica semelhante para os outros campos de pesquisa
 
         if ($request->filled('data_emissao_inicio') && $request->filled('data_emissao_fim')) {
@@ -35,4 +39,5 @@ class SearchController extends Controller
 
         return view('search-results', compact('results'));
     }
+
 }

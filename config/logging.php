@@ -123,6 +123,15 @@ return [
             'handler' => NullHandler::class,
         ],
 
+        'database' => [
+            'driver' => 'database',
+            'table' => 'log_queries',
+            'connection' => null,
+            'queue' => false,
+            'channel' => null,
+            'days' => 14, // Tempo de retenção dos logs no banco de dados
+        ],        
+
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],

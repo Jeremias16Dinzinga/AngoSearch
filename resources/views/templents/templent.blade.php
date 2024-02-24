@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{asset('assets/img/favicon.png')}}" rel="icon">
-    <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+    <link href="{{asset('assets/img/icon-logo.png')}}" rel="icon">
+    <link href="{{asset('assets/img/icon-logo.png')}}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -21,6 +21,9 @@
     <!-- Vendor CSS Files -->
     <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/vendor/bootstrap/css/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/vendor/bootstrap/css/bootstrap-icons.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/vendor/bootstrap/css/open-iconic-bootstrap.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
@@ -51,7 +54,7 @@
                         <div class="form-row">
                             <div class="col-md-4 form-group">
 
-                                <input type="date" name="data_emissao_inicio" id="data_emissao_inicio"
+                                <input type="date" required name="data_emissao_inicio" id="data_emissao_inicio"
                                     class="form-control" placeholder="Data de Emissão (De)"
                                     data-msg="Porfavor insira data de emissão do BI!">
                                 <div class="validate"></div>
@@ -60,7 +63,7 @@
                                 <label> Até</label>
                             </div>
                             <div class="col-md-4 form-group">
-                                <input type="date" name="data_emissao_fim" id="data_emissao_fim" class="form-control"
+                                <input type="date" required name="data_emissao_fim" id="data_emissao_fim" class="form-control"
                                     placeholder="Data de Emissão (Até)"
                                     data-msg="Porfavor insira data de validade do BI!">
                                 <div class="validate"></div>

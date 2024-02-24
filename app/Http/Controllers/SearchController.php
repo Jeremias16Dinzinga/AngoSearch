@@ -27,6 +27,34 @@ class SearchController extends Controller
             $query->where('naturalidade', $request->input('naturalidade'));
         }
 
+        if ($request->filled('sexo')) {
+            $query->where('sexo', $request->input('sexo'));
+        }
+
+        if ($request->filled('altura')) {
+            $query->where('altura', $request->input('altura'));
+        }
+
+        if ($request->filled('nome_pai')) {
+            $query->where('nome_pai', $request->input('nome_pai'));
+        }
+
+        if ($request->filled('nome_mae')) {
+            $query->where('nome_mae', $request->input('nome_mae'));
+        }
+
+        if ($request->filled('estado_civil')) {
+            $query->where('estado_civil', $request->input('estado_civil'));
+        }
+
+        if ($request->filled('provincia')) {
+            $query->where('provincia', $request->input('provincia'));
+        }
+
+        if ($request->filled('residencia')) {
+            $query->where('residencia', $request->input('residencia'));
+        }
+
         // Lógica semelhante para os outros campos de pesquisa
 
         if ($request->filled('data_emissao_inicio') && $request->filled('data_emissao_fim')) {

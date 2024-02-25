@@ -1,6 +1,5 @@
 
-![Uploading logo.png…]()
-
+![logo](https://github.com/Jeremias16Dinzinga/AngoSearch/assets/117875623/6c8ed27e-623d-4618-9041-ba1e4d1d8687)
 
 ## AngolaSearch
 

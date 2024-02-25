@@ -15,5 +15,7 @@ By implementing these functionalities, users will have the capability to perform
 
 ## Developer Information: 
 •	Name: Jeremas António Dinzinga
+
 •	Emal: jeremias.antonio1999@gmail.com
+
 •	Linkedin: https://www.linkedin.com/in/jeremias-dinzinga-a9867b221/

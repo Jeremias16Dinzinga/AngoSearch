@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Angolano extends Model
 {
-    protected $table = 'angolanos'; // Especifica o nome da tabela no banco de dados
-    protected $primaryKey = 'id'; // Especifica a chave primária da tabela
-
-    // Especifica quais campos podem ser preenchidos em massa
+    protected $table = 'angolanos';
+    protected $primaryKey = 'id';
+    
     protected $fillable = [
         'nome',
         'numero_bilhete',
@@ -26,8 +25,5 @@ class Angolano extends Model
         'data_validade',
     ];
 
-    // Especifica os campos que devem ser tratados como datas pelo Eloquent
-    protected $dates = ['data_nascimento', 'data_emissao', 'data_validade'];
-
-    // Opcional: definir relacionamentos, mutadores, acessores, etc.
+    protected $dates = ['data_nascimento', 'data_emissao', 'data_validade'];   
 }

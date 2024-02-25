@@ -28,29 +28,29 @@
 
           <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <span data-toggle="counter-up">65</span>
+              <span data-toggle="counter-up">{{$totalRegistros}}</span>
               <p>Total de Registos</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <span data-toggle="counter-up">85</span>
+              <span data-toggle="counter-up">{{$totalMasculino}}</span>
               <p>Homens</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <span data-toggle="counter-up">12</span>
+              <span data-toggle="counter-up">{{$totalFeminino}}</span>
               <p>Mulheres</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <span data-toggle="counter-up">15</span>
-              <p>Província</p>
+              <span data-toggle="counter-up">{{$totalProvincias}}</span>
+              <p>Províncias</p>
             </div>
           </div>		  
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SearchController;
+use App\Models\Angolano;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,12 @@ use App\Http\Controllers\SearchController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $totalRegistros = Angolano::count();
+    $totalMasculino = Angolano::where('sexo', 'M')->count();
+    $totalFeminino= Angolano::where('sexo', 'F')->count();
+    $totalProvincias = Angolano::distinct()->count('provincia');
+
+    return view('index', compact('totalRegistros', 'totalMasculino','totalFeminino', 'totalProvincias'));    
 });
 
 Route::get('/startSearch', function () {
@@ -23,6 +29,7 @@ Route::get('/startSearch', function () {
 });
 
 
-Route::get('/search', [SearchController::class, 'search'])->name('search');
+Route::get('/search', [SearchController::class, 'searchQuickly'])->name('search');
+Route::get('/searchUnique', [SearchController::class, 'searchUnique'])->name('searchUnique');
 
 

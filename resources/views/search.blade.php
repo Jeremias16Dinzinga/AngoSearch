@@ -4,14 +4,15 @@
 <!-- ======= Search Section ======= -->
 <section id="contact" class="contact">
     <div class="container" data-aos="fade-up">
-
+    <a href="/" class="btn btn-secondary">
+            Home</a><hr/>
         <div class="section-title mt-5">
             <h2>Busca Única</h2>
         </div>
 
         <div class="row">
             <div class="col-lg-12 mt-lg-0">
-                <form action="{{ route('search') }}" method="GET" class="">
+                <form action="{{ route('searchUnique') }}" method="GET" class="">
                     <div class="form-row">
                         <div class="col-md-3 form-group">
                             <label for="name">Nome:</label>
@@ -19,14 +20,16 @@
                                 placeholder="Insira nome" />
                         </div>
                         <div class="col-md-3 form-group">
-                            <label for="numero_bilhete">Nº do Bilhete:</label>
-                            <input type="text" class="form-control" name="numero_bilhete" id="numero_bilhete" required
-                                placeholder="Insira o nº do Bilhete" />
+                            <label for="sexo">Gênero:</label>
+                            <select class="form-control" name="sexo" id="sexo">
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                            </select>
                         </div>
                         <div class="col-md-3 form-group">
                             <label for="data_nascimento">Data de Nascimento:</label>
-                            <input type="text" name="data_nascimento" class="form-control" id="data_nascimento" required
-                                placeholder="01/01/2000" />
+                            <input type="date" name="data_nascimento" class="form-control" id="data_nascimento"
+                                require />
                         </div>
                         <div class="col-md-3 form-group">
                             <label for="naturalidade">Naturalidade:</label>
@@ -37,12 +40,18 @@
 
                     <div class="form-row">
                         <div class="col-md-3 form-group">
-                            <label for="data_emissao">Data de Emissão:</label>
-                            <input type="date" name="data_emissao" id="data_emissao" class="form-control" required>
+                            <label for="estado_civil">Estado civil:</label>
+                            <select class="form-control" name="estado_civil" id="estado_civil">
+                                <option value="Solteiro">Solteiro</option>
+                                <option value="Casado">Casado</option>
+                                <option value="Divorciado">Divorciado</option>
+                                <option value="Viúvo">Viúvo</option>
+                            </select>
                         </div>
                         <div class="col-md-3 form-group">
-                            <label for="data_validade">Data de validade:</label>
-                            <input type="date" name="data_validade" id="data_validade" class="form-control" required>
+                            <label for="nome_pai">Altura:</label>
+                            <input type="text" name="altura" class="form-control" id="altura" required
+                                placeholder="Insira a altura ex:1.7" />
                         </div>
                         <div class="col-md-3 form-group">
                             <label for="nome_pai">Nome do Pai:</label>
@@ -58,25 +67,17 @@
 
                     <div class="form-row">
                         <div class="col-md-3 form-group">
-                            <label for="sexo">Gênero:</label>
-                            <select class="form-control" name="sexo" id="sexo">
-                                <option value="M">Masculino</option>
-                                <option value="F">Feminino</option>
-                            </select>
+                            <label for="numero_bilhete">Nº do Bilhete:</label>
+                            <input type="text" class="form-control" name="numero_bilhete" id="numero_bilhete" required
+                                placeholder="Insira o nº do Bilhete" />
                         </div>
                         <div class="col-md-3 form-group">
-                            <label for="estado_civil">Estado civil:</label>
-                            <select class="form-control" name="estado_civil" id="estado_civil">
-                                <option value="M">Solteiro</option>
-                                <option value="F">Casado</option>
-                                <option value="F">Divorciado</option>
-                                <option value="F">Viúvo</option>
-                            </select>
+                            <label for="data_emissao">Data de Emissão:</label>
+                            <input type="date" name="data_emissao" id="data_emissao" class="form-control" required>
                         </div>
                         <div class="col-md-3 form-group">
-                            <label for="nome_pai">Altura:</label>
-                            <input type="text" name="altura" class="form-control" id="altura" required
-                                placeholder="Insira a altura ex:1.7" />
+                            <label for="data_validade">Data de validade:</label>
+                            <input type="date" name="data_validade" id="data_validade" class="form-control" required>
                         </div>
                         <div class="col-md-3 form-group">
                             <label for="provincia">Província:</label>

@@ -28,8 +28,8 @@
     <link href="{{asset('assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
-
+    <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">    
+    
     <!-- Template Main CSS File -->
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
 
@@ -54,19 +54,17 @@
                         <div class="form-row">
                             <div class="col-md-4 form-group">
 
-                                <input type="date" required name="data_emissao_inicio" id="data_emissao_inicio"
+                                <input type="date" value="{{request('data_emissao_inicio')}}" required name="data_emissao_inicio" id="data_emissao_inicio"
                                     class="form-control" placeholder="Data de Emissão (De)"
-                                    data-msg="Porfavor insira data de emissão do BI!">
-                                <div class="validate"></div>
+                                    data-msg="Porfavor insira data de emissão do BI!">                                
                             </div>
                             <div class="col-md-1 form-group text-center">
                                 <label> Até</label>
                             </div>
                             <div class="col-md-4 form-group">
-                                <input type="date" required name="data_emissao_fim" id="data_emissao_fim" class="form-control"
+                                <input type="date" value="{{request('data_emissao_fim')}}" required name="data_emissao_fim" id="data_emissao_fim" class="form-control"
                                     placeholder="Data de Emissão (Até)"
-                                    data-msg="Porfavor insira data de validade do BI!">
-                                <div class="validate"></div>
+                                    data-msg="Porfavor insira data de validade do BI!">                                
                             </div>
                             <div class="col-md-2 form-group">
                                 <div class="text-center"><button type="submit"
